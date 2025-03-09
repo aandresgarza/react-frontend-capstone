@@ -11,7 +11,7 @@ import five from "../assets/img/five.webp";
 function Home() {
   return (
     <div className="wrap">
-      <section className="full-green">
+      <section className="full-green" id="home">
         <div className="container flex">
           <article>
             <h1>Little Lemon</h1>
@@ -29,7 +29,7 @@ function Home() {
           </article>
         </div>
       </section>
-      <section className="container flex">
+      <section className="container flex" id="menu">
         <h2>This week specials!</h2>
         <a class="btn-primary" href="/reservations">
           Online Menu
@@ -132,7 +132,7 @@ function Home() {
           </article>
         </div>
       </section>
-      <section class="description">
+      <section class="description" id="about">
         <div className="container flex">
           <article>
             <h1>Little Lemon</h1>

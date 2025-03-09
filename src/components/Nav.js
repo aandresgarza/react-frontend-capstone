@@ -1,22 +1,18 @@
 import { NavLink } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
+
 function Nav() {
     return (
       <nav>
         <ul>
         <li>
-          <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
-            Home
-          </NavLink>
+        <Link smooth to="/#home">Home</Link>
         </li>
         <li>
-          <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")}>
-          About
-          </NavLink>
+          <Link smooth to="/#about">About</Link>
         </li>
         <li>
-          <NavLink to="/menu" className={({ isActive }) => (isActive ? "active" : "")}>
-          Menu
-          </NavLink>
+        <Link smooth to="/#menu">Menu</Link>
         </li>
         <li>
           <NavLink to="/reservations" className={({ isActive }) => (isActive ? "active" : "")}>
