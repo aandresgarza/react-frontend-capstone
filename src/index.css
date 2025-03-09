@@ -9,6 +9,7 @@
   --yellow: #f4ce14;
   --orange: #ee9f7a;
   --light-grey: #edefee;
+  --red-danger: #dc3545;
   --container-size: 71.25rem;
   --h1-size: 4rem;
   --h2-size: 2.5rem;
@@ -44,7 +45,74 @@ header {
   }
 }
 
-main, footer {
+.empty-page {
+  min-height: calc(100vh - 515px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reservation {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+h1{
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+  .form {
+    display: flex;
+    background-color: var(--light-grey);
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 300px;
+    gap: 15px;
+
+    >form>div {
+      margin-bottom: 20px;
+    }
+    .input-error {
+      border: 1px solid var(--red-danger);
+    }
+    
+    .error-message {
+      color: var(--red-danger);
+      margin-top: 6px;
+      font-size: 0.875rem; /* Tamaño pequeño */
+      
+    }
+
+    input,
+    select {
+      padding: 10px 10px;
+      border: 1px solid var(--green);
+      border-radius: 8px;
+      width: 100%;
+      box-sizing: border-box;
+      font-family: var(var(--font-text));
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+main,
+footer {
+  >.empty-page {
+    min-height: calc(100vh - 515px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   >div.wrap {
     margin-top: 6.9375rem;
 
@@ -52,73 +120,97 @@ main, footer {
       &.full-green {
         background-color: var(--green);
       }
-      &.description{
-        >div{
-          >article{
 
-            &:first-of-type{
+      &.description {
+        >div {
+          >article {
+
+            &:first-of-type {
               max-width: 100%;
-            
-          }
-            &:last-of-type{
+
+            }
+
+            &:last-of-type {
               position: relative;
-              >img:first-of-type{
+
+              >img:first-of-type {
                 position: absolute;
                 top: 30%;
                 right: 20%;
               }
             }
-          >h1, p{
-            color: var(--green);
-          }
-          >h2{
-            color: var(--black);
-          }
 
-        }
+            >h1,
+            p {
+              color: var(--green);
+            }
+
+            >h2 {
+              color: var(--black);
+            }
+
+          }
         }
       }
-      &.testimonials{
-        >div{
+
+      &.testimonials {
+        >div {
           margin-top: 0;
-          &:first-of-type{
+
+          &:first-of-type {
             margin-top: 0;
           }
-          &.flex{
+
+          &.flex {
             align-items: stretch;
           }
-          >h2{
+
+          >h2 {
             color: var(--white);
           }
-         > article{
-          text-align: center;
-          background-color: var(--white);
-          padding: 15px;
-        border-radius: 20px;
-        justify-content: center;
-        max-width: 100%;
-        &:last-of-type{
-          text-align: center;
+
+          >article {
+            text-align: center;
+            background-color: var(--white);
+            padding: 15px;
+            border-radius: 20px;
+            justify-content: center;
+            max-width: 100%;
+
+            &:last-of-type {
+              text-align: center;
+            }
+
+            >img.face {
+              text-align: center;
+              border-radius: 200px;
+              max-width: 100px;
+              max-height: 100px;
+              margin-bottom: 0;
+            }
+            >img:not(.face) {
+              height: auto;
+              display: block;
+              align-items: unset;
+              object-fit: none;
+              margin: 0 auto;
+              margin-bottom: inherit;
+            }
+
+            >p {
+              text-align: left;
+              color: var(--green);
+            }
+          }
         }
-        >img{
-          text-align: center;
-          border-radius: 200px;
-          max-width: 100px;
-          max-height: 100px;
-          margin-bottom: 0;
-        }
-        >p{
-          text-align: left;
-          color: var(--green);
-        }
-        }}
       }
 
       &.recipes {
         margin-top: 0;
         padding-top: 0;
         align-items: stretch;
-        > article {
+
+        >article {
           flex: 1 1;
           border-top-left-radius: 20px;
           border-top-right-radius: 20px;
@@ -136,7 +228,8 @@ main, footer {
             padding: 0 20px 20px 20px;
             display: flex;
             flex-direction: column;
-            >p{
+
+            >p {
               padding-bottom: 1.875rem;
             }
 
@@ -198,30 +291,38 @@ main, footer {
 }
 
 footer {
+  a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 24px;
+    font-family: var(--font-titles);
+
+  }
   &.full-green {
     background-color: var(--green);
   }
-  >nav>ul {
-    list-style: none;
-    >li {
-      >a {
-        text-decoration: none;
-        color: var(--white);
-        font-size: 20px;
-        font-family: var(--font-titles);
 
-      }
+  ul {
+    list-style: none;
+
+    >li {
+      color: var(--white);
+      font-size: 24px;
+        font-family: var(--font-titles);
+      
     }
-    h4{
+
+    h4 {
       color: var(--white);
       margin-bottom: 30px;
+      font-size: 24px;
       font-family: var(--font-titles);
-      font-size: 20px;
       font-weight: 100;
     }
-    
+
   }
 }
+
 .container {
   max-width: var(--container-size);
   margin: 0 auto;
@@ -284,17 +385,21 @@ p {
   padding: .5rem 1rem;
   text-decoration: none;
   display: inline-block;
+  font-family: var(--font-text);
+  cursor: pointer;
 
   &:hover {
     background-color: var(--black);
     border: 1px solid var(--black);
     color: var(--white);
   }
-  .flex-column{
+
+  .flex-column {
     display: flex;
     flex-direction: column;
   }
 }
-footer{
-margin-top: 180px;
+
+footer {
+  margin-top: 180px;
 }

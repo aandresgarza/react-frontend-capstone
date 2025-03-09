@@ -5,8 +5,10 @@ import bruschetta from "../assets/img/bruchetta.svg";
 import lemon_dessert from "../assets/img/lemon_dessert.jpg";
 import ours1 from "../assets/img/ours-1.jpg";
 import ours2 from "../assets/img/ours-2.jpg";
+import three from "../assets/img/three.webp";
+import five from "../assets/img/five.webp";
 
-function Main() {
+function Home() {
   return (
     <div className="wrap">
       <section className="full-green">
@@ -46,7 +48,7 @@ function Main() {
               Chicago style feta cheese, garnished with crunchy garlic and
               rosemary croutons.
             </p>
-            <a className="link" href="">
+            <a className="link" href="#">
               Order delivery <img src={delivery}></img>
             </a>
           </div>
@@ -60,7 +62,7 @@ function Main() {
             </div>
             <p>
               Our Bruschetta is made from grilled bread that has been smeared
-              with garlic and seasoned with salt and olive oil.
+              with garlic and seasoned with salt and olive oil.<br/><br/>
             </p>
             <a className="link" href="">
               Order delivery <img src={delivery}></img>
@@ -77,7 +79,7 @@ function Main() {
             <p>
               This comes straight from grandma's recipe book, every last
               ingredient has been sourced and is as authentic as can be
-              imagined.
+              imagined.<br/><br/>
             </p>
             <a className="link" href="">
               Order delivery <img src={delivery}></img>
@@ -91,16 +93,18 @@ function Main() {
         </div>
         <div className="container flex">
           <article className="flex-column">
-            <img src={restauranfood} alt="Restaurant food" />
+            <img src="https://th.bing.com/th/id/OIP.GRcSO_TzU8lzoyaeKJUiPwHaHl?rs=1&pid=ImgDetMain" className="face" alt="Restaurant food" />
             <h4>Testimonial 1</h4>
+            <img src={five} alt="five"/>
             <p>
               "This place is a hidden gem! The food is incredibly fresh, and you
               can really taste the quality in every bite. "
             </p>
           </article>
           <article className="flex-column">
-            <img src={restauranfood} alt="Restaurant food" />
+            <img src="https://th.bing.com/th/id/OIP.r3X2hhGxdRaQjwuihyzFMAHaHa?rs=1&pid=ImgDetMain" className="face" alt="Restaurant food" />
             <h4>Testimonial 2</h4>
+            <img src={five} alt="five"/>
             <p>
               "I was so impressed with the flavors and freshness of the food
               here! Everything tasted like it was made from scratch with
@@ -108,16 +112,18 @@ function Main() {
             </p>
           </article>
           <article className="flex-column">
-            <img src={restauranfood} alt="Restaurant food" />
+            <img src="https://opem.b-cdn.net/wp-content/uploads/2022/10/como-elegir-foto-para-curriculum-768x644.png" className="face" alt="Restaurant food" />
             <h4>Testimonial 3</h4>
+            <img src={three} alt="three"/>
             <p>
               "Delicious food, fresh ingredients, and unbeatable prices! I’ll be
               telling all my friends about this place!"
             </p>
           </article>
           <article className="flex-column">
-            <img src={restauranfood} alt="Restaurant food" />
+            <img src="https://www.raisa.de/assets/images/7/Stella%20Rathjens_Homepage-dd1c97dc.png" className="face" alt="Restaurant food" />
             <h4>Testimonial 4</h4>
+            <img src={five} alt="five" width="50"/>
             <p>
               "Amazing food at an even better price! Every dish tasted fresh and
               full of flavor. You can tell they use high-quality ingredients,
@@ -153,4 +159,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Home;
