@@ -40,8 +40,14 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
                   setFieldValue("date", e.target.value);
                   dispatch({ type: "UPDATE_TIMES", payload: e.target.value });
                 }}
+                aria-describedby="date-error"
               />
-              <ErrorMessage name="date" component="small" className="error-message" />
+              <ErrorMessage 
+                name="date" 
+                component="small" 
+                className="error-message" 
+                id="date-error"
+              />
             </div>
 
             <div>
@@ -51,6 +57,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
                 id="time"
                 name="time"
                 className={errors.time && touched.time ? "input-error" : ""}
+                aria-describedby="time-error"
               >
                 <option value="">Select a time</option>
                 {availableTimes.map((t) => (
@@ -59,7 +66,12 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
                   </option>
                 ))}
               </Field>
-              <ErrorMessage name="time" component="small" className="error-message" />
+              <ErrorMessage 
+                name="time" 
+                component="small" 
+                className="error-message" 
+                id="time-error"
+              />
             </div>
 
             <div>
@@ -71,8 +83,14 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
                 min="1"
                 max="10"
                 className={errors.guests && touched.guests ? "input-error" : ""}
+                aria-describedby="guests-error"
               />
-              <ErrorMessage name="guests" component="small" className="error-message" />
+              <ErrorMessage 
+                name="guests" 
+                component="small" 
+                className="error-message" 
+                id="guests-error"
+              />
             </div>
 
             <div>
@@ -82,16 +100,22 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
                 id="occasion"
                 name="occasion"
                 className={errors.occasion && touched.occasion ? "input-error" : ""}
+                aria-describedby="occasion-error"
               >
                 <option value="">Select an occasion</option>
                 <option value="birthday">Birthday</option>
                 <option value="anniversary">Anniversary</option>
                 <option value="other">Other</option>
               </Field>
-              <ErrorMessage name="occasion" component="small" className="error-message" />
+              <ErrorMessage 
+                name="occasion" 
+                component="small" 
+                className="error-message" 
+                id="occasion-error"
+              />
             </div>
 
-            <button className="btn-primary" type="submit">
+            <button className="btn-primary" type="submit" aria-label="Submit the booking form"> 
               Book Now
             </button>
           </Form>

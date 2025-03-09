@@ -52,7 +52,7 @@ describe('BookingPage Component', () => {
   });
 
   test('should log error message if form submission fails', async () => {
-    submitAPI.mockReturnValue(false); 
+    submitAPI.mockReturnValue(false);
     fetchAPI.mockResolvedValue(['17:00', '18:00', '19:00']);
     render(<BookingPage />);
 
